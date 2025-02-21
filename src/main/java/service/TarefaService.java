@@ -11,4 +11,14 @@ public class TarefaService {
 		TarefaDAO dao = new TarefaDAO();
 		return dao.listar();
 	}
+	
+	public Tarefa buscaPorId(Integer id) {
+		TarefaDAO dao = new TarefaDAO();
+		return dao.buscarPorId(id);
+	}
+	
+	public List<Tarefa> buscaPorDescricao(String descricao) {
+		TarefaDAO dao = new TarefaDAO();
+		return dao.buscaPorDescricao(descricao);
+	}
 }
