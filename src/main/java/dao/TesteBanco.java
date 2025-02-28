@@ -19,6 +19,8 @@ public class TesteBanco {
 		 
 		  System.out.println("-----------------------------------------------------------------------");
 		  
+		  // CONSULTA
+		  /*
 		  Scanner scanner = new Scanner(System.in);
 		  System.out.println("Qual tarefa você quer consultar?");
 		  int criterio = scanner.nextInt();
@@ -35,44 +37,39 @@ public class TesteBanco {
 		  for(Tarefa t2: lista2) { System.out.println(t2);
 		  }
 		  
+		  System.out.println("-----------------------------------------------------------------------");
+		  */
+		
+		  //INCLUSÃO
+		  /*
 		  Tarefa tarefaIncluir = new Tarefa();
-		  tarefaIncluir.setDescricao("Comer biscoito");
-		  tarefaIncluir.setPrazo(1);
+		  tarefaIncluir.setDescricao("Comer biscoito"); tarefaIncluir.setPrazo(1);
 		  tarefaIncluir.setFinalizada(false);
+			 
+		  if(service.incluirTarefa(tarefaIncluir)) {
+			  System.out.println("Registro incluído com sucesso!"); 
+			  } else {
+				  System.out.println("Ocorreu algum erro"); 
+				  }
 		  
 		  System.out.println("-----------------------------------------------------------------------");
+			 */
+		
+			// EXCLUSÃO
+		  	/*
+			Scanner scanner2 = new Scanner(System.in);
+			System.out.println("Qual tarefa você quer excluir?"); 
+			int criterio2 = scanner2.nextInt();
+			  
+			Tarefa t = new Tarefa();
+			  
+			t = service.buscaPorId(criterio2);
+			  
+			if(service.excluirTarefa(t)) { System.out.println("Excluído com sucesso!"); }
+			else { System.out.println("Ocorreu algum erro"); }
+			 */
 		  
-		  if(service.incluirTarefa(tarefaIncluir)) {
-			  System.out.println("Registro incluído com sucesso!");
-		  } else {
-			  System.out.println("Ocorreu algum erro");
-		  }
+		  // ALTERAÇÃO 
 		  
-		  Tarefa alterarTarefa = new Tarefa();
-		  alterarTarefa.setDescricao("Comer biscoito recheado");
-		  alterarTarefa.setPrazo(1);
-		  alterarTarefa.setFinalizada(false);
-		  alterarTarefa.setId(12);
-		  
-		  System.out.println("-----------------------------------------------------------------------");
-		  
-		  if(service.incluirTarefa(tarefaIncluir)) {
-			  System.out.println("Registro incluído com sucesso!");
-		  } else {
-			  System.out.println("Ocorreu algum erro");
-		  }
-		  
-		  Tarefa excluirTarefa = new Tarefa();
-		  excluirTarefa.setDescricao("Comer biscoito");
-		  excluirTarefa.setPrazo(1);
-		  excluirTarefa.setFinalizada(false);
-		  
-		  System.out.println("-----------------------------------------------------------------------");
-		  
-		  if(service.incluirTarefa(tarefaIncluir)) {
-			  System.out.println("Registro incluído com sucesso!");
-		  } else {
-			  System.out.println("Ocorreu algum erro");
-		  }
 	}
 }
